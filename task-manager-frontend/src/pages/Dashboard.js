@@ -13,9 +13,10 @@ function Dashboard() {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetchTasks();
-  }, []);
+ // eslint-disable-next-line react-hooks/exhaustive-deps
+useEffect(() => {
+  fetchTasks();
+}, []);
 
   const fetchTasks = async () => {
     try {
